@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /*check this */
+}
+body{
+    font-family: 'poppins','sans-serif';
+}
+a{
+    color: blue;
+    text-decoration: none;
+}
+/*Navbar*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    padding: 30px;
+    margin-bottom: 30px; 
+    background-color: #F0F1F3;
+}
+.name{
+    color: black;
+    font-size: larger;
+}
+.icons a{
+    padding: 10px;
+}
+.icons a:hover{
+    color: darkblue;
+}
+
+/*about me*/
+.aboutme{
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.aboutme .details h2{
+    font-weight: normal,bold;
+    margin-bottom: 5px;
+}
+.details p{
+    font-size: medium;
+}
+.details{
+    flex: 7;
+}
+.ajslogo{
+    font-size: smaller;
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.ajslogo img{
+    border-radius: 50%;  
+    width: 250px; /* size of ajs img*/
+}
+.links
+{
+    margin-top: 10px;
+}
+.links a{
+    padding:0px 5px;
+    border: solid blue 1px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block; /*used bz wen minimize the screen logo and name shldnt seperate*/
+    margin-bottom: 5px;
+}
+.links a:hover{
+    color: darkblue;
+}
+/*skills*/
+#skills{
+    padding: 0px 50px;
+    margin-bottom: 50px;
+}
+.skills__h2{
+    text-align: center;
+    font-weight: normal,bold;
+}
+.detail p{
+    text-align: center;
+    font-size: medium;
+}
+.skillcontainer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid lightgray 1px;
+    padding: 5px 10px;
+    margin: 0px 15px;
+    margin-bottom: 15px;
+}
+.skill__img img{
+    width: 30px;
+    padding: 0px 5px;
+}
+.skill__img span{
+    font-style: italic;
+    font-size: small;
+}
+/*Developer*/
+#developer{
+    padding: 0px 50px;
+    margin-bottom:30px;
+}
+.developer__h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.mydetails{
+    text-align: center;
+}
+.mydetails img{
+    border-radius: 47%;
+    width: 170px;
+}
+.namee{   
+    font-size: large;
+    font-weight: bold;
+}
+.dev__designation{
+    font-size: medium;
+}
+
+.developer__container{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.developer__content p{
+    text-align: left;
+}
+/*contact*/
+#contact{
+    padding: 0px 50px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.contact__container{
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+}
+.contact__h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact__text{
+    flex:3;
+}
+.contact__container form{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+.contact__btn{
+    margin-top: 10px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px;
+    background-color:skyblue;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+.contact__container form textarea{
+    height: 100px;
+}
+.contact__btn:hover{
+    background-color: darkblue;
+    color: wheat;
+    cursor: pointer;
+}
+.contact__container form input,textarea{
+    border: solid skyblue 1px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+/*navbar media query*/
+@media (max-width: 660px)
+{
+   nav{
+    padding: 3px 15px;
+   }
+   .name{
+    font-size: medium;
+   }
+   .icons span{
+    display: none;
+   }
+   .icons i{
+    font-size: medium;
+   }
+}
+/*about me media query*/
+@media (max-width:660px){
+    .aboutme{
+        flex-direction: column-reverse;
+    }
+    .ajslogo img{
+        width: 180px;/*size of ajs img*/
+    }
+    .details{
+        margin-top: 20px;
+    }
+    .details h2,p{
+        text-align: left;
+    }
+    .links{
+        display: flex;
+        justify-content: left;
+    }
+} 
+/*skills media query*/
+@media (max-width:660px){
+    #skills h2{
+        text-align: left;
+    }
+}
+/*Developer media query*/
+@media (max-width:660px){
+    .developer__h2{
+        text-align: left;
+    }
+    .developer__container{
+        flex-direction: column;
+    }
+    .developer__content p{
+        text-align: center;
+    }
+    .developer__content{
+        margin-top: 0px;
+    }
+}
+/*contact media query*/
+@media (max-width:660px)
+{
+   .contact__container{
+    flex-direction: column-reverse;
+   }
+   .contact__h2{
+    text-align: left;
+   }
+}
